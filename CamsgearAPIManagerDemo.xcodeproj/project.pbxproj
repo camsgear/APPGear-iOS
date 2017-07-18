@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF384EF01EB079E900E083B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF384EEF1EB079E900E083B8 /* main.m */; };
+		DF384EF31EB079E900E083B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF384EF21EB079E900E083B8 /* AppDelegate.m */; };
+		DF384EF61EB079E900E083B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF384EF51EB079E900E083B8 /* ViewController.m */; };
+		DF384EF91EB079E900E083B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF384EF71EB079E900E083B8 /* Main.storyboard */; };
+		DF384EFB1EB079E900E083B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF384EFA1EB079E900E083B8 /* Assets.xcassets */; };
+		DF384EFE1EB079E900E083B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF384EFC1EB079E900E083B8 /* LaunchScreen.storyboard */; };
+		DF384F181EB07A6000E083B8 /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DF384F171EB07A6000E083B8 /* libresolv.9.tbd */; };
+		DF47B7651EB9CC89007ED1CD /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF47B75D1EB9CC89007ED1CD /* SVIndefiniteAnimatedView.m */; };
+		DF47B7661EB9CC8A007ED1CD /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF47B75F1EB9CC89007ED1CD /* SVProgressAnimatedView.m */; };
+		DF47B7671EB9CC8A007ED1CD /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DF47B7601EB9CC89007ED1CD /* SVProgressHUD.bundle */; };
+		DF47B7681EB9CC8A007ED1CD /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DF47B7621EB9CC89007ED1CD /* SVProgressHUD.m */; };
+		DF47B7691EB9CC8A007ED1CD /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DF47B7641EB9CC89007ED1CD /* SVRadialGradientLayer.m */; };
+		E714F7ED1F1DAB000000FE8D /* 226.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E714F7EC1F1DAB000000FE8D /* 226.jpg */; };
+		E714F7EF1F1DAC740000FE8D /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E714F7EE1F1DAC740000FE8D /* test.mp4 */; };
+		E714F8031F1DC0D80000FE8D /* APPGear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E714F8021F1DC0D80000FE8D /* APPGear.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DF384EEB1EB079E900E083B8 /* CamsgearAPIManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CamsgearAPIManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF384EEF1EB079E900E083B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DF384EF11EB079E900E083B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DF384EF21EB079E900E083B8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DF384EF41EB079E900E083B8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DF384EF51EB079E900E083B8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DF384EF81EB079E900E083B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DF384EFA1EB079E900E083B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF384EFD1EB079E900E083B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DF384EFF1EB079E900E083B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF384F171EB07A6000E083B8 /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
+		DF47B75C1EB9CC89007ED1CD /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		DF47B75D1EB9CC89007ED1CD /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		DF47B75E1EB9CC89007ED1CD /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		DF47B75F1EB9CC89007ED1CD /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		DF47B7601EB9CC89007ED1CD /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		DF47B7611EB9CC89007ED1CD /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		DF47B7621EB9CC89007ED1CD /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		DF47B7631EB9CC89007ED1CD /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		DF47B7641EB9CC89007ED1CD /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		E714F7EC1F1DAB000000FE8D /* 226.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 226.jpg; sourceTree = "<group>"; };
+		E714F7EE1F1DAC740000FE8D /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
+		E714F8021F1DC0D80000FE8D /* APPGear.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = APPGear.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF384EE81EB079E900E083B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF384F181EB07A6000E083B8 /* libresolv.9.tbd in Frameworks */,
+				E714F8031F1DC0D80000FE8D /* APPGear.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF384EE21EB079E900E083B8 = {
+			isa = PBXGroup;
+			children = (
+				E714F8021F1DC0D80000FE8D /* APPGear.framework */,
+				DF384EED1EB079E900E083B8 /* CamsgearAPIManagerDemo */,
+				DF384EEC1EB079E900E083B8 /* Products */,
+				DF384F161EB07A6000E083B8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DF384EEC1EB079E900E083B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF384EEB1EB079E900E083B8 /* CamsgearAPIManagerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF384EED1EB079E900E083B8 /* CamsgearAPIManagerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E714F7EE1F1DAC740000FE8D /* test.mp4 */,
+				E714F7EC1F1DAB000000FE8D /* 226.jpg */,
+				DF47B75B1EB9CC89007ED1CD /* SVProgressHUD */,
+				DF384EF11EB079E900E083B8 /* AppDelegate.h */,
+				DF384EF21EB079E900E083B8 /* AppDelegate.m */,
+				DF384EF41EB079E900E083B8 /* ViewController.h */,
+				DF384EF51EB079E900E083B8 /* ViewController.m */,
+				DF384EF71EB079E900E083B8 /* Main.storyboard */,
+				DF384EFA1EB079E900E083B8 /* Assets.xcassets */,
+				DF384EFC1EB079E900E083B8 /* LaunchScreen.storyboard */,
+				DF384EFF1EB079E900E083B8 /* Info.plist */,
+				DF384EEE1EB079E900E083B8 /* Supporting Files */,
+			);
+			path = CamsgearAPIManagerDemo;
+			sourceTree = "<group>";
+		};
+		DF384EEE1EB079E900E083B8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF384EEF1EB079E900E083B8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF384F161EB07A6000E083B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF384F171EB07A6000E083B8 /* libresolv.9.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF47B75B1EB9CC89007ED1CD /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				DF47B75C1EB9CC89007ED1CD /* SVIndefiniteAnimatedView.h */,
+				DF47B75D1EB9CC89007ED1CD /* SVIndefiniteAnimatedView.m */,
+				DF47B75E1EB9CC89007ED1CD /* SVProgressAnimatedView.h */,
+				DF47B75F1EB9CC89007ED1CD /* SVProgressAnimatedView.m */,
+				DF47B7601EB9CC89007ED1CD /* SVProgressHUD.bundle */,
+				DF47B7611EB9CC89007ED1CD /* SVProgressHUD.h */,
+				DF47B7621EB9CC89007ED1CD /* SVProgressHUD.m */,
+				DF47B7631EB9CC89007ED1CD /* SVRadialGradientLayer.h */,
+				DF47B7641EB9CC89007ED1CD /* SVRadialGradientLayer.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF384EEA1EB079E900E083B8 /* CamsgearAPIManagerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF384F021EB079E900E083B8 /* Build configuration list for PBXNativeTarget "CamsgearAPIManagerDemo" */;
+			buildPhases = (
+				DF384EE71EB079E900E083B8 /* Sources */,
+				DF384EE81EB079E900E083B8 /* Frameworks */,
+				DF384EE91EB079E900E083B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CamsgearAPIManagerDemo;
+			productName = CamsgearAPIManagerDemo;
+			productReference = DF384EEB1EB079E900E083B8 /* CamsgearAPIManagerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF384EE31EB079E900E083B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = cleven;
+				TargetAttributes = {
+					DF384EEA1EB079E900E083B8 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = K3DL5K3M3D;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DF384EE61EB079E900E083B8 /* Build configuration list for PBXProject "CamsgearAPIManagerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF384EE21EB079E900E083B8;
+			productRefGroup = DF384EEC1EB079E900E083B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF384EEA1EB079E900E083B8 /* CamsgearAPIManagerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF384EE91EB079E900E083B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF384EFE1EB079E900E083B8 /* LaunchScreen.storyboard in Resources */,
+				E714F7EF1F1DAC740000FE8D /* test.mp4 in Resources */,
+				DF384EFB1EB079E900E083B8 /* Assets.xcassets in Resources */,
+				E714F7ED1F1DAB000000FE8D /* 226.jpg in Resources */,
+				DF384EF91EB079E900E083B8 /* Main.storyboard in Resources */,
+				DF47B7671EB9CC8A007ED1CD /* SVProgressHUD.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF384EE71EB079E900E083B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF47B7691EB9CC8A007ED1CD /* SVRadialGradientLayer.m in Sources */,
+				DF384EF61EB079E900E083B8 /* ViewController.m in Sources */,
+				DF47B7661EB9CC8A007ED1CD /* SVProgressAnimatedView.m in Sources */,
+				DF384EF31EB079E900E083B8 /* AppDelegate.m in Sources */,
+				DF384EF01EB079E900E083B8 /* main.m in Sources */,
+				DF47B7651EB9CC89007ED1CD /* SVIndefiniteAnimatedView.m in Sources */,
+				DF47B7681EB9CC8A007ED1CD /* SVProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DF384EF71EB079E900E083B8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF384EF81EB079E900E083B8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DF384EFC1EB079E900E083B8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF384EFD1EB079E900E083B8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DF384F001EB079E900E083B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DF384F011EB079E900E083B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF384F031EB079E900E083B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					arvm7s,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K3DL5K3M3D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CamsgearAPIManagerDemo",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = CamsgearAPIManagerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Camsgear.CamsgearAPIManagerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DF384F041EB079E900E083B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					arvm7s,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K3DL5K3M3D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CamsgearAPIManagerDemo",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = CamsgearAPIManagerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Camsgear.CamsgearAPIManagerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF384EE61EB079E900E083B8 /* Build configuration list for PBXProject "CamsgearAPIManagerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF384F001EB079E900E083B8 /* Debug */,
+				DF384F011EB079E900E083B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF384F021EB079E900E083B8 /* Build configuration list for PBXNativeTarget "CamsgearAPIManagerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF384F031EB079E900E083B8 /* Debug */,
+				DF384F041EB079E900E083B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF384EE31EB079E900E083B8 /* Project object */;
+}

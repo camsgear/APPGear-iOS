@@ -1,0 +1,6 @@
+framework module APPGear {
+  umbrella header "APPGear.h"
+
+  export *
+  module * { export * }
+}
