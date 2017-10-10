@@ -257,7 +257,7 @@
     localMedia.name = @"test";
     NSString *mp4Path = [[NSBundle mainBundle]pathForResource:@"test" ofType:@"mp4"];
     NSString *imagePath = [[NSBundle mainBundle]pathForResource:@"226.jpg" ofType:nil];
-    localMedia.mediaUrl = mp4Path;
+    localMedia.mediaUrl = imagePath;
     localMedia.thumbnailUrl = imagePath;
     localMedia.videoDescription = @"shahjahjkasjkg";
     localMedia.id = [[NSUUID UUID]UUIDString];
@@ -266,17 +266,17 @@
     localMedia.duration = 130;
     localMedia.width = [UIScreen mainScreen].bounds.size.width;
     localMedia.height = [UIScreen mainScreen].bounds.size.width;
-    localMedia.mediaType = @"videos";
+    localMedia.mediaType = @"Norma";
     
     //如果是需要标定参数的视频,需要按如下要求传
-    localMedia.calibrationData = @"version=v1&type=1&data=0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.,0.0,0.0,0.0,0.0;0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0"; //第二组;
+//    localMedia.calibrationData = @"version=v1&type=1&data=0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.,0.0,0.0,0.0,0.0;0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0"; //第二组;
     
     //如果MediaInfo没有 ,需要创建MediaInfo
     CDACamdoraMediaInfo *mediaInfo = [CDACamdoraMediaInfo creatMediaInfoWithPicNum:CDAPicNum_2D width:1080 height:1080 fov:CDAFov_185 order:CDACamdoraMediaInfoOrderLeft2Right orientation:CDAOrientation_90 mount:CDACamdoraMediaInfoMountDesktop projection:CDACamdoraMediaInfoProjectionFisheye needStitch:YES fps:30];
     localMedia.camdoraMediaInfo = mediaInfo;
     
     
-    [[CDAAPIManager sharedManager]releaseMediaByLocalMedia:localMedia MediaType:CDABeLongToMe_Video image:nil success:^(id result) {
+    [[CDAAPIManager sharedManager]releaseMediaByLocalMedia:localMedia MediaType:CDABeLongToMe_image image:[UIImage imageNamed:@"cover"] success:^(id result) {
         
         [SVProgressHUD showSuccessWithStatus:@"发布成功"];
     } uploadProgress:^(int64_t bytesSent, int64_t totalByteSent, int64_t totalBytesExpectedToSend) {

@@ -19,7 +19,7 @@
 @property (nonatomic, strong)NSDate *createdAt;
 @property (nonatomic, assign)long long size;
 @property (nonatomic, assign)int duration;
-@property (nonatomic, copy)NSString *mediaType;//videos/images
+@property (nonatomic, copy)NSString *mediaType;//列:Norma,Panorama,StereoHemisphere,StereoFlat,StereoPanorama
 @property (nonatomic, assign)int width;
 @property (nonatomic, assign)int height;
 @property (nonatomic, assign)BOOL isDrafted;

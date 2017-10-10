@@ -21,7 +21,13 @@ typedef void (^APIUploadProgressBlock)(int64_t bytesSent, int64_t totalByteSent,
 
 ///  API配置信息
 /// 需要在- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions中添加
-+ (void)setUpConfiguration;
++ (void)setUpConfigurationWithAppKey:(nonnull NSString *)appkey appName:(nonnull NSString *)appName;
+
+// 返回分享视频地址
+- (nonnull NSString *)getSharedVideoWithVideoId:(nonnull NSString *)videoId;
+
+// 返回分享图片地址
+- (nonnull NSString *)getSharedImageWithImageId:(nonnull NSString *)imageId;
 
 ///  CDAAPIManager单列
 ///
@@ -67,10 +73,11 @@ typedef void (^APIUploadProgressBlock)(int64_t bytesSent, int64_t totalByteSent,
 ///  获取videoID 之前的视频
 ///
 ///  @param videoId videoID
-///  @param userId  userID 可选
+///  @param userId  userID 只能获取用户个人的数据,广场数据下拉请调用
+///  - (void) getLatestVideos: (APISuccessBlock)success failure:(APIFailureBlock)failure;
 ///  @param success 成功回调
 ///  @param failure 失败回调
-- (void) getVideosBefore: (nonnull NSString *)videoId UserId:( nullable NSString *)userId success:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
+- (void) getVideosBefore: (nonnull NSString *)videoId UserId:( nonnull NSString *)userId success:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
 
 ///  获取我的最新视频
 ///
@@ -84,27 +91,6 @@ typedef void (^APIUploadProgressBlock)(int64_t bytesSent, int64_t totalByteSent,
 ///  @param success   成功回调
 ///  @param failure   失败回调
 - (void) getMyVideosAfter: ( nonnull NSString *)currentId success:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
-
-///  通过日期 获取之前的视频
-///
-///  @param date    date
-///  @param success 成功回调
-///  @param failure 失败回调
-- (void) getMyVideosBefore: ( nonnull NSDate *)date success:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
-
-///  通过日期 获取之后的视频
-///
-///  @param date    date
-///  @param limit   一次获取的最大限制
-///  @param success 成功回调
-///  @param failure 失败回调
-- (void) getMyVideosBefore: ( nonnull NSDate *)date withLimit:(int)limit  success:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
-
-///  获取我的视频总数
-///
-///  @param success 成功回调
-///  @param failure 失败回调
-- (void) getMyVideosCount:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
 
 ///  获取用户,发布,收藏,直播,私密直播数量
 ///
@@ -124,27 +110,6 @@ typedef void (^APIUploadProgressBlock)(int64_t bytesSent, int64_t totalByteSent,
 ///  @param success 成功回调
 ///  @param failure 失败回调
 - (void) getMyFavouriteVideosAfter: ( nonnull NSString *)voteId success:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
-
-///  通过日期 获取之前的收藏视频
-///
-///  @param date    date
-///  @param success 成功回调
-///  @param failure 失败回调
-- (void) getMyFavouriteVideosBefore: ( nonnull NSDate *)date success:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
-
-/// 通过日期 获取之前的收藏视频
-///
-///  @param date    date
-///  @param limit   一次获取视频的数量
-///  @param success 成功回调
-///  @param failure 失败回调
-- (void) getMyFavouriteVideosBefore: ( nonnull NSDate *)date withLimit:(int)limit  success:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
-
-///  获取我收藏的视频的总数
-///
-///  @param success 成功回调
-///  @param failure 失败回调
-- (void) getMyFavouriteVideosCount:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
 
 ///  给视频点赞
 ///
@@ -242,21 +207,6 @@ typedef void (^APIUploadProgressBlock)(int64_t bytesSent, int64_t totalByteSent,
 ///  @param success 成功回调
 ///  @param failure 失败回调
 - (void) getMyEventsAfter: ( nonnull NSString *)eventId success:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
-
-///  通过日期获取之前的直播数据
-///
-///  @param date    date
-///  @param success 成功回调
-///  @param failure 失败回调
-- (void) getMyEventsBefore: ( nonnull NSDate *)date success:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
-
-///  通过日期 获取之前的直播数据
-///
-///  @param date    date
-///  @param limit   一次获取的数量
-///  @param success 成功回调
-///  @param failure 失败回调
-- (void) getMyEventsBefore: ( nonnull NSDate *)date withLimit:(int)limit  success:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
 
 ///  通过eventIDs 获取直播的状态
 ///
@@ -397,8 +347,6 @@ typedef void (^APIUploadProgressBlock)(int64_t bytesSent, int64_t totalByteSent,
 ///  @param success   success
 ///  @param failure   failure
 -(void)deleteVideoCommentByCommentsId:( nonnull NSString *)commentId success:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
-
-
 
 ///  下载文件
 ///
@@ -555,11 +503,10 @@ typedef void (^APIUploadProgressBlock)(int64_t bytesSent, int64_t totalByteSent,
 
 ///  获取imageId之前图片列表
 ///
-///  @param categoryId media中images分类id
 ///  @param imageId 获取imageId之前的图片
 ///  @param success 成功回调
 ///  @param failure 失败回调
-- (void) getImagesBeforeWithCategoryId:(nonnull NSString *)categoryId imageId:(nullable NSString *)imageId UserId:(nullable NSString *)userId success:(nonnull APISuccessBlock)success failure:(nonnull APIFailureBlock)failure;
+- (void) getImagesBeforeWithImageId:(nullable NSString *)imageId UserId:(nullable NSString *)userId success:(nonnull APISuccessBlock)success failure:(nonnull APIFailureBlock)failure;
 
 /// 获取更多图片图片
 ///
@@ -568,6 +515,38 @@ typedef void (^APIUploadProgressBlock)(int64_t bytesSent, int64_t totalByteSent,
 ///  @param success 成功回调
 ///  @param failure 失败回调
 - (void)getImagesAfterWithImageId:(nonnull NSString *)imageId userId:(nullable NSString *)userId success:(nonnull APISuccessBlock)success failure:(nonnull APIFailureBlock)failure;
+
+#pragma mark - 获取用户图片
+
+/**
+ 通过userID获取用户图片
+
+ @param uid userID
+ @param success 成功回调
+ @param failure 失败回调
+ */
+- (void)getUserImagesByUserId:(nonnull NSString *)uid success:(nonnull APISuccessBlock)success failure:(nonnull APIFailureBlock)failure;
+
+/**
+ 通过imageID获取之前的图片(最新的)
+
+ @param imageId imageID
+ @param uid userID
+ @param success 成功回调
+ @param failure 失败回调
+ */
+- (void)getUserImagesBeforeImageId:(nonnull NSString *)imageId userId:(nonnull NSString *)uid success:(nonnull APISuccessBlock)success failure:(nonnull APIFailureBlock)failure;
+
+/**
+ 通过imageID获取之后的图片
+
+ @param imageId imageID
+ @param uid userID
+ @param success 成功回调
+ @param failure 失败回调
+ */
+- (void)getUserImagesAfterImageId:(nonnull NSString *)imageId userId:(nonnull NSString *)uid success:(nonnull APISuccessBlock)success failure:(nonnull APIFailureBlock)failure;
+
 
 #pragma mark - 首页 video API
 ///  获取最新视频列表
@@ -595,7 +574,7 @@ typedef void (^APIUploadProgressBlock)(int64_t bytesSent, int64_t totalByteSent,
 ///  @param videoId videoId
 ///  @param success 成功回调
 ///  @param failure 失败回调
-- (void)getVideosIncreaseViewsCountByVideoId:( nonnull NSString *)videoId success:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
+- (void)setVideosIncreaseViewsCountByVideoId:( nonnull NSString *)videoId success:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
 
 #pragma mark - 首页 media API
 ///  获取最新"new"视频或图片列表

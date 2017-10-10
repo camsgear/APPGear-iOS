@@ -29,7 +29,8 @@
 typedef NS_ENUM(NSInteger,CDALiveType){
     
     CDALiveType_Home_Live = 0, //首页直播观看
-    CDALiveType_Home_privateLive //私密直播观看
+    CDALiveType_Home_privateLive, //私密直播观看
+    CDALiveType_Home_monitoring  //监控
 };
 
 typedef NS_ENUM(NSInteger,CDAMediaIsBelongToMe){
@@ -83,7 +84,8 @@ typedef NS_ENUM(int,CDAPicNum){
 typedef NS_ENUM(int,CDAFov){
     
     CDAFov_0 = 0,
-    CDAFov_185 = 185,
+    CDAFov_185 = 180,
+    CDAFov_180 = 185,
     CDAFov_190 = 190,
     CDAFov_210 = 210,
     CDAFov_220 = 220
@@ -91,6 +93,7 @@ typedef NS_ENUM(int,CDAFov){
 };
 
 typedef NS_ENUM(int,CDAOrientation){
+    CDAOrientation_0 = 0,
     CDAOrientation_90 = 90,
     CDAOrientation_180 = 180,
     CDAOrientation_270= 270

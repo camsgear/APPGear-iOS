@@ -19,7 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     ///  配置API信息
-    [CDAAPIManager setUpConfiguration];
+    [CDAAPIManager setUpConfigurationWithAppKey:@"JKsDV0zcWwrCL7qmqEJlaPU7Euue" appName:@"camsgear"];
     
     ///  配置用户信息
     [CDAUserManager setUpUserConfiguration];
