@@ -3,7 +3,7 @@
 - [手动集成](#手动集成)
 - CocoaPod (即将支持)
 ### 手动集成
-#### 1. 下载APPGear-iOS SDK [下载地址](https://github.com/camsgear/APPGear-iOS/releases/tag/v1.0.1)
+#### 1. 下载APPGear-iOS SDK [下载地址](https://github.com/camsgear/APPGear-iOS/releases/tag/v1.0.2)
 #### 2. 接入APPGear-iOS SDK
 - 将APPGear-iOS SDK添加到工程
 - 添加项目配置
@@ -35,6 +35,7 @@ return YES;
 - [用户模块](#用户模块)
 - [获取手机验证码](#获取手机验证码)
 - [登录](#登录)
+- [邮箱登录](#邮箱登录)
 - [第三方登录](#第三方登录)
 - [注销](#注销)
 - [获取账户余额](#获取账户余额)
@@ -43,6 +44,7 @@ return YES;
 - [下拉获取最新数据](#下拉获取最新数据)
 - [上拉获取更多视频数据](#上拉获取更多视频数据)
 - [发布视频](#发布视频)
+- [取消发布](#取消发布)
 
 ### 获取分享地址
 - [获取分享地址](#获取分享地址)
@@ -61,6 +63,7 @@ return YES;
 ### 用户模块
 - [获取手机验证码](#获取手机验证码)
 - [登录](#登录)
+- [邮箱登录](#邮箱登录)
 - [第三方登录](#第三方登录)
 - [注销](#注销)
 - [获取账户余额](#获取账户余额)
@@ -113,10 +116,33 @@ success:^(id result) {
 ```
 ---
 
+####邮箱登录
+#####函数定义
+```
+- (void) signinWithE_MailAccount:( nonnull NSString *)mailAccount passWord:( nonnull NSString *)passWord success:( nonnull UserSuccessBlock)success failure:( nonnull UserFailureBlock)failure;
+```
+##### 参数说明
+-  ```mailAccount``` - 邮箱账号
+-  ```pwassWord```  - 密码
+##### 示例
+
+```
+- (IBAction)clickE_MailSign:(id)sender {
+
+[[CDAUserManager sharedManager]signinWithE_MailAccount:@"邮箱账号" passWord:@"密码" success:^(id  _Nonnull result) {
+
+} failure:^(NSError * _Nonnull error) {
+
+}];
+
+}
+```
+
+
 #### 第三方登录
 #####函数定义
-
-```Objective-C
+```
+Objective-C
 - (void) CamdoraSignIn: (nullable NSDictionary *)userInfo success:(nonnull UserSuccessBlock)success failure:(nonnull UserFailureBlock)failure Platform:(CDAThirdType)platform
 ```
 ##### 参数说明
@@ -311,4 +337,31 @@ float percent = 0.8 + 0.2 * totalByteSent / totalBytesExpectedToSend;
 
 ```
 ---
+
+---
+#### 取消发布
+##### 函数定义
+```
+- (void)cancelReleaseWithMediaId:(nonnull NSString *)mediaId isPublish:(BOOL)isPublish success:(nonnull APISuccessBlock)success failure:(nonnull APIFailureBlock)failure;
+```
+##### 参数说明
+- ```mediaId``` - 视频获取图片ID
+- ```isPublish``` - NO = 取消发布
+- ```success``` - 成功回调
+- ```failure``` - 失败回调
+##### 示例
+
+```
+- (IBAction)clickCancelReleaseButton:(id)sender {
+
+CDAVideo *video = self.videos.firstObject;
+
+[[CDAAPIManager sharedManager]cancelReleaseWithMediaId:video.id isPublish:NO success:^(id  _Nonnull result) {
+
+} failure:^(id  _Nonnull error) {
+
+}];
+
+}
+```
 

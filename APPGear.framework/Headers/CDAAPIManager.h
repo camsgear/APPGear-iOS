@@ -658,6 +658,47 @@ typedef void (^APIUploadProgressBlock)(int64_t bytesSent, int64_t totalByteSent,
 ///  @param failure   失败回调
 - (void)getGagListByChannelId:( nonnull NSString *)channelId success:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
 
+#pragma mark - 举报拉黑
+
+/**
+ 拉黑
+ 
+ @param uid userID
+ @param success 成功回调
+ @param failure 失败回调
+ */
+- (void)getDefriendWithUserId:(nonnull NSString *)uid success:(nonnull APISuccessBlock)success failure:(nonnull APIFailureBlock)failure;
+
+/**
+ 举报
+ 
+ @param reportType reportType
+ @param mediaId mediaId
+ @param success 成功回调
+ @param failure 失败回调
+ */
+- (void)reportWithReportMediaWithReportType:(nonnull NSString *)reportType mediaId:(nonnull NSString *)mediaId success:(nonnull APISuccessBlock)success failure:(nonnull APIFailureBlock)failure;
+
+/**
+ 屏蔽用户数据
+ 
+ @param mediaId mediaId
+ @param success 成功回调
+ @param failure 失败回调
+ */
+- (void)blockUserDataWithMediaId:(nonnull NSString *)mediaId success:(nonnull APISuccessBlock)success failure:(nonnull APIFailureBlock)failure;
+
+
+/**
+ 取消发布
+ 
+ @param mediaId mediaId
+ @param success 成功回调
+ @param failure 失败回调
+ */
+- (void)cancelReleaseWithMediaId:(nonnull NSString *)mediaId isPublish:(BOOL)isPublish success:(nonnull APISuccessBlock)success failure:(nonnull APIFailureBlock)failure;
+
+
 
 //---------------以下接口需要在UserManager中调用-----------
 //修改登录接口  2017-2-21
@@ -665,6 +706,8 @@ typedef void (^APIUploadProgressBlock)(int64_t bytesSent, int64_t totalByteSent,
 - (void) signinOrSignup:( nonnull NSString *)phone code:( nonnull NSString *)code success:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
 
 - (void) getVerifyCode:( nonnull NSString *)phone type:(CDASignType)type success:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
+
+- (void) signinWithE_MailAccount:( nonnull NSString *)mailAccount passWord:( nonnull NSString *)passWord success:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
 
 - (void) postAvatarOrCoverAvatarPath:( nonnull NSString *)avatarPath success:( nonnull APISuccessBlock)success failure:( nonnull APIFailureBlock)failure;
 

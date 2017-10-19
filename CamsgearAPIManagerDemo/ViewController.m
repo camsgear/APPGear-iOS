@@ -79,6 +79,15 @@
     }];
     
 }
+- (IBAction)clickE_MailSign:(id)sender {
+    
+    [[CDAUserManager sharedManager]signinWithE_MailAccount:@"邮箱账号" passWord:@"密码" success:^(id  _Nonnull result) {
+        
+    } failure:^(NSError * _Nonnull error) {
+        
+    }];
+    
+}
 #pragma mark - 退出登录
 - (IBAction)clickOnTheExitTheLogInButton:(id)sender {
     
@@ -292,6 +301,17 @@
     
 }
 
+- (IBAction)clickCancelReleaseButton:(id)sender {
+    
+    CDAVideo *video = self.videos.firstObject;
+    
+    [[CDAAPIManager sharedManager]cancelReleaseWithMediaId:video.id isPublish:NO success:^(id  _Nonnull result) {
+        
+    } failure:^(id  _Nonnull error) {
+        
+    }];
+    
+}
 
 - (void)showStatusWithTitle:(NSString *)title Message:(NSString *)message
 {

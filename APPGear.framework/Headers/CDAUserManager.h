@@ -26,10 +26,10 @@ typedef void (^UserFailureBlock)(NSError  * _Nonnull error);
 
 
 +(instancetype _Nullable ) sharedManager;
-///  发布总数
-@property (nonatomic, assign, readonly) int currentUserPublishCount;
-///  收藏总数
-@property (nonatomic, assign, readonly) int currentUserFavouriteCount;
+///  发布视频总数
+@property (nonatomic, assign, readonly) int currentUserPublishVideoCount;
+///  发布图片总数
+@property (nonatomic, assign, readonly) int currentUserPublishImageCount;
 ///  直播总数
 @property (nonatomic, assign, readonly) int currentUserLiveCount;
 ///  私密直播数量
@@ -101,6 +101,17 @@ typedef void (^UserFailureBlock)(NSError  * _Nonnull error);
 ///  @param success 成功回调
 ///  @param failure 失败回调
 - (void) getVerifyCodeWithPhone:(nonnull NSString *)phone type:(CDASignType)type success:(nonnull UserSuccessBlock)success failure:(nonnull UserFailureBlock)failure;
+
+
+/**
+ 使用邮箱登录
+
+ @param mailAccount 邮箱账号
+ @param passWord 密码
+ @param success 成功回调
+ @param failure 失败回调
+ */
+- (void) signinWithE_MailAccount:( nonnull NSString *)mailAccount passWord:( nonnull NSString *)passWord success:( nonnull UserSuccessBlock)success failure:( nonnull UserFailureBlock)failure;
 
 ///  退出登录
 ///
