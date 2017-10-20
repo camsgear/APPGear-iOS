@@ -3,7 +3,7 @@
 - [手动集成](#手动集成)
 - CocoaPod (即将支持)
 ### 手动集成
-#### 1. 下载APPGear-iOS SDK [下载地址](https://github.com/camsgear/APPGear-iOS/releases/tag/v1.0.2)
+#### 1. 下载APPGear-iOS SDK [下载地址](https://github.com/camsgear/APPGear-iOS/releases/tag/v1.0.3)
 #### 2. 接入APPGear-iOS SDK
 - 将APPGear-iOS SDK添加到工程
 - 添加项目配置
