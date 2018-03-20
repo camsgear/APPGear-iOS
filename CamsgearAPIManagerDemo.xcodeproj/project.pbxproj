@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70261CF82060BD6500E64BE3 /* APPGear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70261CF72060BD6500E64BE3 /* APPGear.framework */; };
 		DF384EF01EB079E900E083B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF384EEF1EB079E900E083B8 /* main.m */; };
 		DF384EF31EB079E900E083B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF384EF21EB079E900E083B8 /* AppDelegate.m */; };
 		DF384EF61EB079E900E083B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF384EF51EB079E900E083B8 /* ViewController.m */; };
@@ -21,10 +22,10 @@
 		DF47B7691EB9CC8A007ED1CD /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DF47B7641EB9CC89007ED1CD /* SVRadialGradientLayer.m */; };
 		E714F7ED1F1DAB000000FE8D /* 226.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E714F7EC1F1DAB000000FE8D /* 226.jpg */; };
 		E714F7EF1F1DAC740000FE8D /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E714F7EE1F1DAC740000FE8D /* test.mp4 */; };
-		E714F8031F1DC0D80000FE8D /* APPGear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E714F8021F1DC0D80000FE8D /* APPGear.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70261CF72060BD6500E64BE3 /* APPGear.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = APPGear.framework; sourceTree = "<group>"; };
 		DF384EEB1EB079E900E083B8 /* CamsgearAPIManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CamsgearAPIManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF384EEF1EB079E900E083B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DF384EF11EB079E900E083B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		DF47B7641EB9CC89007ED1CD /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		E714F7EC1F1DAB000000FE8D /* 226.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 226.jpg; sourceTree = "<group>"; };
 		E714F7EE1F1DAC740000FE8D /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
-		E714F8021F1DC0D80000FE8D /* APPGear.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = APPGear.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF384F181EB07A6000E083B8 /* libresolv.9.tbd in Frameworks */,
-				E714F8031F1DC0D80000FE8D /* APPGear.framework in Frameworks */,
+				70261CF82060BD6500E64BE3 /* APPGear.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +66,7 @@
 		DF384EE21EB079E900E083B8 = {
 			isa = PBXGroup;
 			children = (
-				E714F8021F1DC0D80000FE8D /* APPGear.framework */,
+				70261CF72060BD6500E64BE3 /* APPGear.framework */,
 				DF384EED1EB079E900E083B8 /* CamsgearAPIManagerDemo */,
 				DF384EEC1EB079E900E083B8 /* Products */,
 				DF384F161EB07A6000E083B8 /* Frameworks */,
@@ -335,6 +335,7 @@
 					arvm7s,
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = K3DL5K3M3D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -359,6 +360,7 @@
 					arvm7s,
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = K3DL5K3M3D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
